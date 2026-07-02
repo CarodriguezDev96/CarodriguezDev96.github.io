@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Carlos Rodríguez — Senior Backend Developer PHP Laravel</title>
+<meta name="description" content="Senior Backend Developer PHP & Laravel | Technical Lead | Fintech & Fiduciario | Disponible para trabajo remoto"/>
+<meta property="og:title" content="Carlos Rodríguez — Senior Backend Developer"/>
+<meta property="og:description" content="5+ años construyendo plataformas financieras con PHP, Laravel y Arquitectura Hexagonal."/>
+<meta property="og:url" content="https://CarodriguezDev96.github.io"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07111f;
+  --surface:#0c1a2e;
+  --surface2:#111f35;
+  --border:#162438;
+  --border2:#1e3450;
+  --cyan:#22d3ee;
+  --cyan-glow:rgba(34,211,238,.08);
+  --cyan-border:rgba(34,211,238,.25);
+  --purple:#a78bfa;
+  --purple-glow:rgba(167,139,250,.07);
+  --purple-border:rgba(167,139,250,.25);
+  --green:#34d399;
+  --text:#e2e8f0;
+  --muted:#64748b;
+  --muted2:#94a3b8;
+  --head:'Space Grotesk',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(7,17,31,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .3s}
+.logo{font-family:var(--head);font-weight:700;font-size:15px;color:var(--cyan);letter-spacing:-.02em;text-decoration:none}
+.logo span{color:var(--muted2)}
+.nav-ul{list-style:none;display:flex;gap:2.25rem}
+.nav-ul a{color:var(--muted2);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.03em;transition:color .2s}
+.nav-ul a:hover{color:var(--cyan)}
+.nav-cta{background:var(--cyan);color:#07111f;padding:7px 20px;border-radius:7px;font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;font-family:var(--head);letter-spacing:-.01em}
+.nav-cta:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hbg span{width:22px;height:2px;background:var(--muted2);border-radius:2px;transition:all .3s}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 2.5rem 4rem;position:relative;overflow:hidden}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(34,211,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.025) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.glow1{position:absolute;top:-80px;right:-120px;width:640px;height:500px;background:radial-gradient(ellipse,rgba(34,211,238,.07) 0%,transparent 60%);pointer-events:none}
+.glow2{position:absolute;bottom:-80px;left:-80px;width:480px;height:400px;background:radial-gradient(ellipse,rgba(167,139,250,.06) 0%,transparent 60%);pointer-events:none}
+.hero-wrap{max-width:1120px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.28);color:var(--green);padding:6px 14px;border-radius:24px;font-size:12px;font-family:var(--mono);margin-bottom:1.5rem}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:var(--head);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:700;line-height:1.08;letter-spacing:-.04em;color:#f1f5f9;margin-bottom:1.1rem}
+h1 em{font-style:normal;color:var(--cyan)}
+.hero-sub{font-size:16px;color:var(--muted2);line-height:1.75;margin-bottom:2.25rem;max-width:500px}
+.hero-sub strong{color:var(--cyan);font-weight:500}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--cyan);color:#07111f;padding:13px 26px;border-radius:8px;font-weight:700;text-decoration:none;font-size:14px;transition:all .25s;font-family:var(--head)}
+.btn-p:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,238,.22)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border2);color:var(--muted2);padding:13px 26px;border-radius:8px;font-weight:500;text-decoration:none;font-size:14px;transition:all .25s}
+.btn-s:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* terminal */
+.term-wrap{background:#070d18;border:1px solid var(--border2);border-radius:14px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.6)}
+.term-top{background:#0c1829;padding:.65rem 1rem;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--border)}
+.td{width:11px;height:11px;border-radius:50%}
+.r{background:#ff5f57}.y{background:#febc2e}.g{background:#28c840}
+.tname{flex:1;text-align:center;font-size:11px;color:var(--muted);font-family:var(--mono)}
+.term-code{padding:1.25rem 1.5rem;font-family:var(--mono);font-size:12.5px;line-height:2;min-height:300px}
+.k{color:#a78bfa}.s{color:#22d3ee}.v{color:#fb923c}.st{color:#34d399}.cm{color:#3b5268}.wh{color:#f1f5f9}.cu{display:inline-block;width:8px;height:14px;background:var(--cyan);animation:blink .85s steps(1)infinite;vertical-align:middle;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+
+/* ── STATS ── */
+.stats{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.75rem 2.5rem}
+.stats-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.snum{font-family:var(--head);font-size:2.75rem;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.slbl{font-size:11.5px;color:var(--muted2);margin-top:.4rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+
+/* ── SHARED SECTION ── */
+section{padding:5.5rem 2.5rem}
+.wrap{max-width:1120px;margin:0 auto}
+.ey{font-family:var(--mono);font-size:11.5px;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+.sh{font-family:var(--head);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;letter-spacing:-.04em;color:#f1f5f9;margin-bottom:.7rem}
+.sd{color:var(--muted2);font-size:15px;max-width:560px;line-height:1.75;margin-bottom:3.25rem}
+
+/* ── EXPERIENCE ── */
+.exp-sec{background:var(--surface)}
+.tl{position:relative;padding-left:2rem}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--cyan) 0%,var(--purple) 60%,transparent 100%)}
+.ei{position:relative;padding-left:2.25rem;padding-bottom:3.5rem}
+.ei:last-child{padding-bottom:0}
+.edot{position:absolute;left:-2.55rem;top:7px;width:11px;height:11px;border-radius:50%;border:2px solid var(--bg);box-shadow:0 0 0 3px rgba(34,211,238,.2)}
+.eperiod{display:inline-block;font-family:var(--mono);font-size:11px;padding:3px 10px;border-radius:4px;margin-bottom:.75rem}
+.ep-cyan{color:var(--cyan);background:var(--cyan-glow);border:1px solid var(--cyan-border)}
+.ep-pur{color:var(--purple);background:var(--purple-glow);border:1px solid var(--purple-border)}
+.eco{font-family:var(--head);font-size:22px;font-weight:700;color:#f1f5f9;margin-bottom:.2rem}
+.erole{font-family:var(--mono);font-size:12px;margin-bottom:1rem}
+.edesc{color:var(--muted2);font-size:14px;margin-bottom:.85rem;line-height:1.75}
+.ebul{list-style:none;margin-bottom:1.25rem}
+.ebul li{font-size:13.5px;color:var(--muted2);padding:.28rem 0 .28rem 1.3rem;position:relative;line-height:1.65}
+.ebul li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:10px;top:.48rem}
+.etags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-size:11px;font-family:var(--mono);padding:3px 10px;border-radius:4px;border:1px solid var(--border2);color:var(--muted2)}
+.tag.c{border-color:var(--cyan-border);color:var(--cyan);background:var(--cyan-glow)}
+.tag.p{border-color:var(--purple-border);color:var(--purple);background:var(--purple-glow)}
+
+/* ── SKILLS ── */
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.sc{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:1.4rem 1.5rem;transition:border-color .25s,transform .25s}
+.sc:hover{border-color:var(--border2);transform:translateY(-4px)}
+.sc-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.sc-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.ic{background:var(--cyan-glow);border:1px solid var(--cyan-border)}
+.ip{background:var(--purple-glow);border:1px solid var(--purple-border)}
+.ig{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25)}
+.io{background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.25)}
+.sc-head h3{font-family:var(--head);font-size:14px;font-weight:600;color:#f1f5f9}
+.pills{display:flex;flex-wrap:wrap;gap:.35rem}
+.pill{font-size:11px;font-family:var(--mono);padding:3px 9px;border-radius:4px;background:var(--surface2);border:1px solid var(--border);color:var(--muted2)}
+.pill.c{border-color:var(--cyan-border);color:var(--cyan);background:var(--cyan-glow)}
+.pill.p{border-color:var(--purple-border);color:var(--purple);background:var(--purple-glow)}
+.pill.g{border-color:rgba(52,211,153,.3);color:var(--green);background:rgba(52,211,153,.07)}
+.pill.o{border-color:rgba(251,146,60,.3);color:#fb923c;background:rgba(251,146,60,.07)}
+
+/* ── ABOUT ── */
+.about-sec{background:var(--surface)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.at p{color:var(--muted2);font-size:15px;line-height:1.8;margin-bottom:1.1rem}
+.at p strong{color:var(--cyan);font-weight:500}
+.vals{margin-top:2.25rem;border-top:1px solid var(--border);padding-top:1.25rem}
+.vi{display:flex;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--border)}
+.vi:last-child{border-bottom:none}
+.vlb{font-family:var(--head);font-size:13px;font-weight:600;color:#f1f5f9;min-width:165px;flex-shrink:0}
+.vde{font-size:13px;color:var(--muted2);line-height:1.65}
+.box{background:var(--bg);border:1px solid var(--border);border-radius:13px;padding:1.4rem 1.5rem;margin-bottom:.9rem}
+.box h4{font-family:var(--head);font-weight:600;font-size:14px;color:#f1f5f9;margin-bottom:.2rem}
+.box p{font-size:12.5px;color:var(--muted2)}
+.badge2{display:inline-block;font-size:10.5px;font-family:var(--mono);padding:3px 9px;border-radius:4px;margin-top:.5rem}
+.bc{color:var(--cyan);background:var(--cyan-glow);border:1px solid var(--cyan-border)}
+.bp{color:var(--purple);background:var(--purple-glow);border:1px solid var(--purple-border)}
+.lr{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--border)}
+.lr:last-child{border-bottom:none}
+
+/* ── CONTACT ── */
+.ct-sec{text-align:center;position:relative;overflow:hidden}
+.ct-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(34,211,238,.05) 0%,transparent 60%);pointer-events:none}
+.ct-email{font-family:var(--mono);font-size:clamp(1rem,2.5vw,1.5rem);color:var(--cyan);display:inline-block;margin:1.25rem 0;text-decoration:none;transition:color .2s;position:relative;z-index:1}
+.ct-email:hover{color:#06b6d4}
+.ct-links{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin-top:2rem;position:relative;z-index:1}
+.cl{display:inline-flex;align-items:center;gap:7px;padding:11px 24px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;border:1px solid var(--border2);color:var(--muted2);transition:all .22s;font-family:var(--head)}
+.cl:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.cl.f{background:var(--cyan);color:#07111f;border-color:var(--cyan)}
+.cl.f:hover{filter:brightness(1.1)}
+.avpill{display:inline-flex;align-items:center;gap:8px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);color:var(--green);padding:9px 20px;border-radius:24px;font-size:12.5px;font-family:var(--mono);margin-top:2rem;position:relative;z-index:1}
+
+footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:12px;color:var(--muted);font-family:var(--mono)}
+footer a{color:var(--cyan);text-decoration:none}
+
+/* reveal */
+.r0{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.r0.show{opacity:1;transform:none}
+
+/* mobile */
+@media(max-width:900px){
+  .hero-wrap{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+  .hero-sub{margin-inline:auto}
+  .hero-btns{justify-content:center}
+  .term-wrap{display:none}
+  .ag{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  nav{padding:.75rem 1.25rem}
+  .nav-ul,.nav-cta{display:none}
+  .hbg{display:flex}
+  section{padding:4rem 1.25rem}
+  .stats{padding:2rem 1.25rem}
+  .vi{flex-direction:column;gap:.25rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#inicio" class="logo">carlos<span>.dev</span></a>
+  <ul class="nav-ul">
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="mailto:carodriguez.ort@gmail.com" class="nav-cta">Contrátame</a>
+  <div class="hbg" id="hbg" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- mobile nav drawer -->
+<div id="drawer" style="display:none;position:fixed;top:57px;left:0;right:0;background:rgba(7,17,31,.98);border-bottom:1px solid #162438;z-index:190;padding:1.5rem 1.75rem">
+  <ul style="list-style:none;display:flex;flex-direction:column;gap:1.25rem">
+    <li><a href="#experiencia" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Experiencia</a></li>
+    <li><a href="#skills" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Skills</a></li>
+    <li><a href="#sobre-mi" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Sobre mí</a></li>
+    <li><a href="#contacto" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Contacto</a></li>
+    <li><a href="mailto:carodriguez.ort@gmail.com" style="color:#22d3ee;text-decoration:none;font-size:15px;font-weight:600">✉ Contrátame</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="grid-bg"></div>
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="hero-wrap">
+    <div>
+      <div class="badge"><span class="badge-dot"></span>Disponible · 100% Remoto</div>
+      <h1>Senior Backend<br>Developer &amp;<br><em>Tech Lead</em></h1>
+      <p class="hero-sub">
+        Más de <strong>5 años</strong> diseñando y escalando plataformas financieras y fiduciarias con <strong>PHP &amp; Laravel</strong>. Arquitectura Hexagonal, DDD, microservicios y liderazgo técnico de equipos de desarrollo.
+      </p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-p">Hablemos →</a>
+        <a href="#experiencia" class="btn-s">Ver experiencia</a>
+        <a href="https://github.com/CarodriguezDev96" target="_blank" class="btn-s">⌥ GitHub</a>
+      </div>
+    </div>
+    <div>
+      <div class="term-wrap">
+        <div class="term-top">
+          <div class="td r"></div><div class="td y"></div><div class="td g"></div>
+          <div class="tname">developer.php</div>
+        </div>
+        <div class="term-code" id="tc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="r0"><div class="snum">5+</div><div class="slbl">Años de experiencia</div></div>
+    <div class="r0"><div class="snum">3</div><div class="slbl">Células técnicas lideradas</div></div>
+    <div class="r0"><div class="snum">100%</div><div class="slbl">Proyectos fintech / fiduciario</div></div>
+    <div class="r0"><div class="snum">∞</div><div class="slbl">Disponible remoto global</div></div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experiencia" class="exp-sec">
+  <div class="wrap">
+    <p class="ey r0">Trayectoria profesional</p>
+    <h2 class="sh r0">Experiencia</h2>
+    <p class="sd r0">Proyectos críticos de negocio en el sector financiero y fiduciario — desde la arquitectura hasta el liderazgo técnico de equipos.</p>
+    <div class="tl">
+
+      <div class="ei r0">
+        <div class="edot" style="background:var(--cyan)"></div>
+        <span class="eperiod ep-cyan">Mayo 2025 – Junio 2026</span>
+        <div class="eco">LINKTIC</div>
+        <div class="erole" style="color:var(--cyan)">// Senior Backend Developer · Technical Lead — Fiduprevisora</div>
+        <p class="edesc">Liderazgo técnico en uno de los proyectos fiduciarios más complejos del país: presupuesto, conciliación bancaria, portal de pagos, contabilidad y tributación.</p>
+        <ul class="ebul">
+          <li>Lideré 3 células técnicas (Presupuesto, Conciliación Bancaria y Portal de Pagos) definiendo arquitectura y estándares de calidad para equipos multidisciplinarios.</li>
+          <li>Diseñé APIs REST escalables bajo Arquitectura Hexagonal + SOLID para módulos contables y tributarios de alta complejidad.</li>
+          <li>Implementé procesamiento masivo con Jobs, Queues y procesos asíncronos para automatizar flujos financieros críticos.</li>
+          <li>Generé reportes financieros avanzados en PDF y Excel; integré almacenamiento documental con AWS S3.</li>
+          <li>Definí estándares de testing automatizado, seguridad y code review para el ecosistema de microservicios.</li>
+        </ul>
+        <div class="etags">
+          <span class="tag c">PHP 8+</span><span class="tag c">Laravel</span><span class="tag c">Hexagonal Arch.</span>
+          <span class="tag c">DDD</span><span class="tag c">SOLID</span><span class="tag">AWS S3</span>
+          <span class="tag">Docker</span><span class="tag">PHPUnit</span><span class="tag">MySQL</span>
+          <span class="tag">Microservices</span><span class="tag">Tech Leadership</span>
+        </div>
+      </div>
+
+      <div class="ei r0">
+        <div class="edot" style="background:var(--purple)"></div>
+        <span class="eperiod ep-pur">Sep 2021 – Mayo 2025</span>
+        <div class="eco">ONOFF Soluciones en Línea</div>
+        <div class="erole" style="color:var(--purple)">// Backend Developer — Fintech de productos financieros digitales</div>
+        <p class="edesc">Desarrollo y mantenimiento de soluciones tecnológicas para una fintech especializada en productos y servicios financieros digitales.</p>
+        <ul class="ebul">
+          <li>Construí y mantuve APIs REST para procesos financieros con integraciones internas y externas, estandarizando contratos entre sistemas.</li>
+          <li>Optimicé consultas y estructuras de bases de datos MySQL mejorando rendimiento y escalabilidad de los servicios.</li>
+          <li>Desarrollé con Laravel, Angular, Vue.js y React para entrega continua de funcionalidades financieras.</li>
+          <li>Participé en análisis técnico, estimación y definición de soluciones con equipos de producto y negocio.</li>
+        </ul>
+        <div class="etags">
+          <span class="tag p">Laravel</span><span class="tag p">MySQL</span><span class="tag p">REST APIs</span>
+          <span class="tag">Angular</span><span class="tag">Vue.js</span><span class="tag">React</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">MongoDB</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <p class="ey r0">Tecnologías</p>
+    <h2 class="sh r0">Stack técnico</h2>
+    <p class="sd r0">Las herramientas con las que construyo sistemas que escalan, se mantienen y resisten el tiempo.</p>
+    <div class="sg">
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ic">⚡</div><h3>Backend</h3></div>
+        <div class="pills">
+          <span class="pill c">PHP 8+</span><span class="pill c">Laravel</span>
+          <span class="pill c">REST APIs</span><span class="pill c">Microservices</span>
+          <span class="pill">Queues &amp; Jobs</span><span class="pill">Async processing</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ip">🏛</div><h3>Arquitectura</h3></div>
+        <div class="pills">
+          <span class="pill p">Hexagonal Arch.</span><span class="pill p">DDD</span>
+          <span class="pill p">SOLID</span><span class="pill p">Clean Code</span>
+          <span class="pill">Clean Architecture</span><span class="pill">CQRS</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ic">🗄</div><h3>Bases de datos</h3></div>
+        <div class="pills">
+          <span class="pill c">MySQL</span><span class="pill c">PostgreSQL</span>
+          <span class="pill">MongoDB</span><span class="pill">Redis</span>
+          <span class="pill">Query optimization</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon io">☁</div><h3>Cloud &amp; DevOps</h3></div>
+        <div class="pills">
+          <span class="pill o">AWS S3</span><span class="pill">Docker</span>
+          <span class="pill">Linux</span><span class="pill">Git</span><span class="pill">CI/CD</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ig">✅</div><h3>Testing &amp; Calidad</h3></div>
+        <div class="pills">
+          <span class="pill g">PHPUnit</span><span class="pill g">Testing automatizado</span>
+          <span class="pill">Code Review</span><span class="pill">Code Security</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ip">🖥</div><h3>Frontend</h3></div>
+        <div class="pills">
+          <span class="pill">Angular</span><span class="pill">Vue.js</span>
+          <span class="pill">React</span><span class="pill">Ionic</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre-mi" class="about-sec">
+  <div class="wrap">
+    <p class="ey r0">Quién soy</p>
+    <h2 class="sh r0">Sobre mí</h2>
+    <div class="ag">
+      <div class="at r0">
+        <p>Soy un ingeniero de backend con más de <strong>5 años construyendo sistemas financieros</strong> que procesan transacciones críticas. He liderado células técnicas, definido arquitecturas, mentorizado desarrolladores y tomado decisiones de alto impacto en el negocio.</p>
+        <p>Mi enfoque es claro: el mejor código no es el más elegante, es el que <strong>resuelve el problema correcto</strong>, se mantiene con el tiempo y permite que el equipo escale sin fricciones.</p>
+        <p>Trabajo mejor en entornos donde la <strong>calidad técnica es un valor real</strong>, no una obligación, y donde puedo aportar tanto desde la ejecución como desde la arquitectura y el liderazgo.</p>
+        <div class="vals">
+          <div class="vi">
+            <div class="vlb">Ingeniería de producto</div>
+            <div class="vde">Entiendo el negocio antes de escribir código. El "por qué" define el "cómo".</div>
+          </div>
+          <div class="vi">
+            <div class="vlb">Calidad como cultura</div>
+            <div class="vde">Testing, code review y documentación son parte del flujo diario, no fases opcionales.</div>
+          </div>
+          <div class="vi">
+            <div class="vlb">Liderazgo técnico</div>
+            <div class="vde">Lidero desde la técnica: mentoría, estándares y decisiones arquitectónicas con el equipo.</div>
+          </div>
+        </div>
+      </div>
+      <div class="r0">
+        <p class="ey" style="margin-bottom:1rem">Educación</p>
+        <div class="box">
+          <h4>Tecnólogo en ADSI</h4>
+          <p>Análisis y Desarrollo de Sistemas de Información</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:3px">SENA · Colombia</p>
+          <span class="badge2 bc">Graduado</span>
+        </div>
+        <div class="box">
+          <h4>Ingeniería de Sistemas</h4>
+          <p>Universidad Nacional Abierta y a Distancia</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:3px">UNAD · Colombia</p>
+          <span class="badge2 bp">En curso</span>
+        </div>
+        <p class="ey" style="margin:1.75rem 0 .85rem">Idiomas</p>
+        <div class="box" style="padding:1rem 1.4rem">
+          <div class="lr"><span style="font-size:13.5px;color:#f1f5f9;font-weight:500">🇨🇴 Español</span><span class="pill g">Nativo</span></div>
+          <div class="lr"><span style="font-size:13.5px;color:#f1f5f9;font-weight:500">🇺🇸 Inglés</span><span class="pill">A2 · En progreso</span></div>
+        </div>
+        <p class="ey" style="margin:1.75rem 0 .85rem">Disponibilidad</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.45rem">
+          <span class="pill c">100% Remoto</span>
+          <span class="pill">Híbrido</span>
+          <span class="pill">Presencial</span>
+          <span class="pill">Internacional</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto" class="ct-sec">
+  <div class="ct-glow"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="ey r0" style="text-align:center">¿Trabajamos juntos?</p>
+    <h2 class="sh r0" style="text-align:center;max-width:600px;margin-inline:auto">¿Tienes un proyecto<br>o una vacante remota?</h2>
+    <p class="r0" style="color:var(--muted2);font-size:15px;max-width:480px;margin:1rem auto 0;text-align:center;line-height:1.75">Estoy disponible para posiciones senior remotas, liderazgo técnico y proyectos en el ecosistema PHP / Laravel / fintech.</p>
+    <a href="mailto:carodriguez.ort@gmail.com" class="ct-email r0">carodriguez.ort@gmail.com</a>
+    <div class="ct-links r0">
+      <a href="mailto:carodriguez.ort@gmail.com" class="cl f">✉ Enviar email</a>
+      <a href="https://linkedin.com/in/carlos-arturorodriguez-a2285a1b9" target="_blank" class="cl">in LinkedIn</a>
+      <a href="https://github.com/CarodriguezDev96" target="_blank" class="cl">⌥ GitHub</a>
+    </div>
+    <div class="r0" style="text-align:center">
+      <span class="avpill">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite"></span>
+        Pereira, Colombia · COT (UTC-5) · Abierto a ofertas remotas
+      </span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="https://github.com/CarodriguezDev96">CarodriguezDev96</a> · Senior Backend Developer · PHP &amp; Laravel · 2026
+</footer>
+
+<script>
+// TERMINAL TYPING
+const lines=[
+  ['cm','// carlos-rodriguez.php'],['',''],
+  ['k','class ','wh','CarlosRodriguez'],['wh','{'],['',''],
+  ['k','    public string ','v','$role'],['wh',"     = 'Senior Backend Developer';"],
+  ['k','    public string ','v','$location'],['wh',"  = 'Pereira, Colombia 🇨🇴';"],
+  ['k','    public array  ','v','$stack'],['wh',"    = ['PHP','Laravel','AWS'];"],
+  ['k','    public array  ','v','$arch'],['wh',"     = ['Hexagonal','DDD'];"],
+  ['k','    public bool   ','v','$openRemote'],['st','  = true;'],['',''],
+  ['st','    public function ','wh','philosophy'],['wh','(): string {'],
+  ['cm','        // El mejor código resuelve'],
+  ['cm','        // el problema correcto.'],
+  ['k','        return ','st',"'Código con propósito.';"],
+  ['wh','    }'],['wh','}'],
+];
+const tc=document.getElementById('tc');
+let li=0;
+function type(){
+  if(li>=lines.length){const c=document.createElement('span');c.className='cu';tc.appendChild(c);return;}
+  const row=lines[li++];const div=document.createElement('div');
+  for(let i=0;i<row.length;i+=2){
+    const s=document.createElement('span');s.className=row[i];
+    s.textContent=row[i+1]||'\u00a0';div.appendChild(s);
+  }
+  tc.appendChild(div);setTimeout(type,75);
+}
+setTimeout(type,700);
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.r0').forEach(el=>obs.observe(el));
+
+// NAV BG
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.background=
+    window.scrollY>60?'rgba(7,17,31,.98)':'rgba(7,17,31,.88)';
+});
+
+// MOBILE NAV
+let open=false;
+function toggleNav(){
+  open=!open;
+  document.getElementById('drawer').style.display=open?'block':'none';
+}
+</script>
+</body>
+</html>
