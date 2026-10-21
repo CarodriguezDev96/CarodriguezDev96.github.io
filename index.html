@@ -3,39 +3,26 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Carlos Rodríguez — Senior Backend Developer PHP Laravel</title>
-<meta name="description" content="Senior Backend Developer PHP & Laravel | Technical Lead | Fintech & Fiduciario | Disponible para trabajo remoto"/>
+<title>Carlos Rodríguez — Senior Backend Developer PHP Laravel · Node.js</title>
+<meta name="description" content="Senior Backend Developer PHP & Laravel, Node.js | Technical Lead | Fintech & Fiduciario | Disponible para trabajo remoto"/>
 <meta property="og:title" content="Carlos Rodríguez — Senior Backend Developer"/>
-<meta property="og:description" content="5+ años construyendo plataformas financieras con PHP, Laravel y Arquitectura Hexagonal."/>
+<meta property="og:description" content="Casi 5 años construyendo plataformas financieras con PHP, Laravel, Node.js y Arquitectura Hexagonal."/>
 <meta property="og:url" content="https://CarodriguezDev96.github.io"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#07111f;
-  --surface:#0c1a2e;
-  --surface2:#111f35;
-  --border:#162438;
-  --border2:#1e3450;
-  --cyan:#22d3ee;
-  --cyan-glow:rgba(34,211,238,.08);
-  --cyan-border:rgba(34,211,238,.25);
-  --purple:#a78bfa;
-  --purple-glow:rgba(167,139,250,.07);
-  --purple-border:rgba(167,139,250,.25);
-  --green:#34d399;
-  --text:#e2e8f0;
-  --muted:#64748b;
-  --muted2:#94a3b8;
-  --head:'Space Grotesk',system-ui,sans-serif;
-  --body:'Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --bg:#07111f;--surface:#0c1a2e;--surface2:#111f35;--border:#162438;--border2:#1e3450;
+  --cyan:#22d3ee;--cyan-glow:rgba(34,211,238,.08);--cyan-border:rgba(34,211,238,.25);
+  --purple:#a78bfa;--purple-glow:rgba(167,139,250,.07);--purple-border:rgba(167,139,250,.25);
+  --green:#34d399;--text:#e2e8f0;--muted:#64748b;--muted2:#94a3b8;
+  --head:'Space Grotesk',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;overflow-x:hidden}
 
-/* ── NAV ── */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(7,17,31,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .3s}
 .logo{font-family:var(--head);font-weight:700;font-size:15px;color:var(--cyan);letter-spacing:-.02em;text-decoration:none}
 .logo span{color:var(--muted2)}
@@ -47,7 +34,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.8rem 2.5rem;display
 .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hbg span{width:22px;height:2px;background:var(--muted2);border-radius:2px;transition:all .3s}
 
-/* ── HERO ── */
+/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:7rem 2.5rem 4rem;position:relative;overflow:hidden}
 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(34,211,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.025) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
 .glow1{position:absolute;top:-80px;right:-120px;width:640px;height:500px;background:radial-gradient(ellipse,rgba(34,211,238,.07) 0%,transparent 60%);pointer-events:none}
@@ -76,20 +63,20 @@ h1 em{font-style:normal;color:var(--cyan)}
 .k{color:#a78bfa}.s{color:#22d3ee}.v{color:#fb923c}.st{color:#34d399}.cm{color:#3b5268}.wh{color:#f1f5f9}.cu{display:inline-block;width:8px;height:14px;background:var(--cyan);animation:blink .85s steps(1)infinite;vertical-align:middle;margin-left:2px}
 @keyframes blink{50%{opacity:0}}
 
-/* ── STATS ── */
+/* STATS */
 .stats{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.75rem 2.5rem}
 .stats-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
 .snum{font-family:var(--head);font-size:2.75rem;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .slbl{font-size:11.5px;color:var(--muted2);margin-top:.4rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
 
-/* ── SHARED SECTION ── */
+/* SHARED */
 section{padding:5.5rem 2.5rem}
 .wrap{max-width:1120px;margin:0 auto}
 .ey{font-family:var(--mono);font-size:11.5px;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
 .sh{font-family:var(--head);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;letter-spacing:-.04em;color:#f1f5f9;margin-bottom:.7rem}
 .sd{color:var(--muted2);font-size:15px;max-width:560px;line-height:1.75;margin-bottom:3.25rem}
 
-/* ── EXPERIENCE ── */
+/* EXPERIENCE */
 .exp-sec{background:var(--surface)}
 .tl{position:relative;padding-left:2rem}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--cyan) 0%,var(--purple) 60%,transparent 100%)}
@@ -110,7 +97,18 @@ section{padding:5.5rem 2.5rem}
 .tag.c{border-color:var(--cyan-border);color:var(--cyan);background:var(--cyan-glow)}
 .tag.p{border-color:var(--purple-border);color:var(--purple);background:var(--purple-glow)}
 
-/* ── SKILLS ── */
+/* PROJECTS */
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem}
+.pj{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.pj:hover{border-color:var(--border2);transform:translateY(-4px)}
+.pj-top{display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-bottom:.9rem;flex-wrap:wrap}
+.pj h3{font-family:var(--head);font-size:20px;font-weight:700;color:#f1f5f9;letter-spacing:-.02em}
+.pj-st{font-family:var(--mono);font-size:10.5px;padding:3px 9px;border-radius:4px}
+.pj .ebul{flex:1}
+.pj-link{display:inline-flex;align-items:center;gap:6px;margin-top:1.25rem;font-family:var(--head);font-size:13px;font-weight:600;color:var(--cyan);text-decoration:none}
+.pj-link:hover{filter:brightness(1.15)}
+
+/* SKILLS */
 .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
 .sc{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:1.4rem 1.5rem;transition:border-color .25s,transform .25s}
 .sc:hover{border-color:var(--border2);transform:translateY(-4px)}
@@ -128,7 +126,7 @@ section{padding:5.5rem 2.5rem}
 .pill.g{border-color:rgba(52,211,153,.3);color:var(--green);background:rgba(52,211,153,.07)}
 .pill.o{border-color:rgba(251,146,60,.3);color:#fb923c;background:rgba(251,146,60,.07)}
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about-sec{background:var(--surface)}
 .ag{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
 .at p{color:var(--muted2);font-size:15px;line-height:1.8;margin-bottom:1.1rem}
@@ -147,7 +145,7 @@ section{padding:5.5rem 2.5rem}
 .lr{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--border)}
 .lr:last-child{border-bottom:none}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .ct-sec{text-align:center;position:relative;overflow:hidden}
 .ct-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(34,211,238,.05) 0%,transparent 60%);pointer-events:none}
 .ct-email{font-family:var(--mono);font-size:clamp(1rem,2.5vw,1.5rem);color:var(--cyan);display:inline-block;margin:1.25rem 0;text-decoration:none;transition:color .2s;position:relative;z-index:1}
@@ -162,11 +160,9 @@ section{padding:5.5rem 2.5rem}
 footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:12px;color:var(--muted);font-family:var(--mono)}
 footer a{color:var(--cyan);text-decoration:none}
 
-/* reveal */
 .r0{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .r0.show{opacity:1;transform:none}
 
-/* mobile */
 @media(max-width:900px){
   .hero-wrap{grid-template-columns:1fr;gap:2.5rem;text-align:center}
   .hero-sub{margin-inline:auto}
@@ -182,16 +178,17 @@ footer a{color:var(--cyan);text-decoration:none}
   section{padding:4rem 1.25rem}
   .stats{padding:2rem 1.25rem}
   .vi{flex-direction:column;gap:.25rem}
+  .pg{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav">
   <a href="#inicio" class="logo">carlos<span>.dev</span></a>
   <ul class="nav-ul">
     <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#sobre-mi">Sobre mí</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -200,10 +197,10 @@ footer a{color:var(--cyan);text-decoration:none}
   <div class="hbg" id="hbg" onclick="toggleNav()"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- mobile nav drawer -->
 <div id="drawer" style="display:none;position:fixed;top:57px;left:0;right:0;background:rgba(7,17,31,.98);border-bottom:1px solid #162438;z-index:190;padding:1.5rem 1.75rem">
   <ul style="list-style:none;display:flex;flex-direction:column;gap:1.25rem">
     <li><a href="#experiencia" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Experiencia</a></li>
+    <li><a href="#proyectos" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Proyectos</a></li>
     <li><a href="#skills" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Skills</a></li>
     <li><a href="#sobre-mi" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Sobre mí</a></li>
     <li><a href="#contacto" style="color:#94a3b8;text-decoration:none;font-size:15px" onclick="toggleNav()">Contacto</a></li>
@@ -213,20 +210,18 @@ footer a{color:var(--cyan);text-decoration:none}
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="grid-bg"></div>
-  <div class="glow1"></div>
-  <div class="glow2"></div>
+  <div class="grid-bg"></div><div class="glow1"></div><div class="glow2"></div>
   <div class="hero-wrap">
     <div>
       <div class="badge"><span class="badge-dot"></span>Disponible · 100% Remoto</div>
       <h1>Senior Backend<br>Developer &amp;<br><em>Tech Lead</em></h1>
       <p class="hero-sub">
-        Más de <strong>5 años</strong> diseñando y escalando plataformas financieras y fiduciarias con <strong>PHP &amp; Laravel</strong>. Arquitectura Hexagonal, DDD, microservicios y liderazgo técnico de equipos de desarrollo.
+        Casi <strong>5 años</strong> diseñando y escalando plataformas financieras y fiduciarias con <strong>PHP &amp; Laravel</strong>, y <strong>Node.js + TypeScript</strong> como stack secundario. Arquitectura Hexagonal, DDD, microservicios y liderazgo técnico.
       </p>
       <div class="hero-btns">
         <a href="#contacto" class="btn-p">Hablemos →</a>
-        <a href="#experiencia" class="btn-s">Ver experiencia</a>
-        <a href="https://github.com/CarodriguezDev96" target="_blank" class="btn-s">⌥ GitHub</a>
+        <a href="#proyectos" class="btn-s">Ver proyectos</a>
+        <a href="https://github.com/CarodriguezDev96" target="_blank" rel="noopener" class="btn-s">⌥ GitHub</a>
       </div>
     </div>
     <div>
@@ -244,10 +239,10 @@ footer a{color:var(--cyan);text-decoration:none}
 <!-- STATS -->
 <div class="stats">
   <div class="stats-inner">
-    <div class="r0"><div class="snum">5+</div><div class="slbl">Años de experiencia</div></div>
+    <div class="r0"><div class="snum">4+</div><div class="slbl">Años de experiencia</div></div>
     <div class="r0"><div class="snum">3</div><div class="slbl">Células técnicas lideradas</div></div>
-    <div class="r0"><div class="snum">100%</div><div class="slbl">Proyectos fintech / fiduciario</div></div>
-    <div class="r0"><div class="snum">∞</div><div class="slbl">Disponible remoto global</div></div>
+    <div class="r0"><div class="snum">2</div><div class="slbl">Proyectos propios desplegados</div></div>
+    <div class="r0"><div class="snum">100%</div><div class="slbl">Disponible remoto</div></div>
   </div>
 </div>
 
@@ -269,12 +264,14 @@ footer a{color:var(--cyan);text-decoration:none}
           <li>Lideré 3 células técnicas (Presupuesto, Conciliación Bancaria y Portal de Pagos) definiendo arquitectura y estándares de calidad para equipos multidisciplinarios.</li>
           <li>Diseñé APIs REST escalables bajo Arquitectura Hexagonal + SOLID para módulos contables y tributarios de alta complejidad.</li>
           <li>Implementé procesamiento masivo con Jobs, Queues y procesos asíncronos para automatizar flujos financieros críticos.</li>
+          <li>Optimicé PostgreSQL con índices y consultas complejas para reportes sobre grandes volúmenes de datos.</li>
           <li>Generé reportes financieros avanzados en PDF y Excel; integré almacenamiento documental con AWS S3.</li>
           <li>Definí estándares de testing automatizado, seguridad y code review para el ecosistema de microservicios.</li>
+          <li>Brindé mentoría técnica a desarrolladores junior y semi-senior.</li>
         </ul>
         <div class="etags">
           <span class="tag c">PHP 8+</span><span class="tag c">Laravel</span><span class="tag c">Hexagonal Arch.</span>
-          <span class="tag c">DDD</span><span class="tag c">SOLID</span><span class="tag">AWS S3</span>
+          <span class="tag c">DDD</span><span class="tag c">SOLID</span><span class="tag">PostgreSQL</span><span class="tag">AWS S3</span>
           <span class="tag">Docker</span><span class="tag">PHPUnit</span><span class="tag">MySQL</span>
           <span class="tag">Microservices</span><span class="tag">Tech Leadership</span>
         </div>
@@ -290,6 +287,7 @@ footer a{color:var(--cyan);text-decoration:none}
           <li>Construí y mantuve APIs REST para procesos financieros con integraciones internas y externas, estandarizando contratos entre sistemas.</li>
           <li>Optimicé consultas y estructuras de bases de datos MySQL mejorando rendimiento y escalabilidad de los servicios.</li>
           <li>Desarrollé con Laravel, Angular, Vue.js y React para entrega continua de funcionalidades financieras.</li>
+          <li>Participé en la migración de aplicaciones Angular y Vue a versiones actuales de cada framework.</li>
           <li>Participé en análisis técnico, estimación y definición de soluciones con equipos de producto y negocio.</li>
         </ul>
         <div class="etags">
@@ -303,19 +301,78 @@ footer a{color:var(--cyan);text-decoration:none}
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="proyectos">
+  <div class="wrap">
+    <p class="ey r0">Proyectos independientes</p>
+    <h2 class="sh r0">Productos que diseñé y desplegué</h2>
+    <p class="sd r0">Dos aplicaciones full stack, una en cada stack: Laravel como principal y Node.js como secundario.</p>
+    <div class="pg">
+
+      <article class="pj r0">
+        <div class="pj-top">
+          <h3>FlowCommerce</h3>
+          <span class="pj-st bc">Laravel · Stack principal</span>
+        </div>
+        <p class="edesc">Plataforma multi-tenant para un negocio de entrega de licores.</p>
+        <ul class="ebul">
+          <li>Arquitectura modular con separación por dominios: dominio, servicios de aplicación, infraestructura y presentación.</li>
+          <li>Multi-tenant con entornos de negocio independientes.</li>
+          <li>Autenticación con Laravel Sanctum y RBAC a nivel de tenant con Spatie Permissions.</li>
+          <li>Redis para caché y procesamiento asíncrono; documentación con ADRs.</li>
+          <li>Desplegado en Neon (PostgreSQL), Render (backend y Redis) y Vercel (frontend).</li>
+        </ul>
+        <div class="etags">
+          <span class="tag c">Laravel 13</span><span class="tag c">PHP 8.3</span><span class="tag c">React</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Docker</span><span class="tag">Multi-tenant</span>
+        </div>
+        <a class="pj-link" href="https://flowcommerce-psi.vercel.app/shop" target="_blank" rel="noopener">Ver en vivo →</a>
+      </article>
+
+      <article class="pj r0">
+        <div class="pj-top">
+          <h3>TicketFlow</h3>
+          <span class="pj-st bp">Node.js · Stack secundario</span>
+        </div>
+        <p class="edesc">Plataforma de gestión de entradas y creación de eventos. En desarrollo activo.</p>
+        <ul class="ebul">
+          <li>API REST en Node.js con Express y TypeScript, con autenticación JWT.</li>
+          <li>PostgreSQL gestionado con Prisma y migraciones.</li>
+          <li>Creación de eventos y gestión de entradas, con frontend en React.</li>
+          <li>Pipeline de CI/CD.</li>
+          <li>Desplegado en Neon (PostgreSQL), Render (backend y Redis) y Vercel (frontend).</li>
+        </ul>
+        <div class="etags">
+          <span class="tag p">Node.js</span><span class="tag p">Express</span><span class="tag p">TypeScript</span>
+          <span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Redis</span><span class="tag">JWT</span><span class="tag">CI/CD</span>
+        </div>
+        <a class="pj-link" href="https://ticketflow-three-green.vercel.app/" target="_blank" rel="noopener">Ver en vivo →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="exp-sec">
   <div class="wrap">
     <p class="ey r0">Tecnologías</p>
     <h2 class="sh r0">Stack técnico</h2>
     <p class="sd r0">Las herramientas con las que construyo sistemas que escalan, se mantienen y resisten el tiempo.</p>
     <div class="sg">
       <div class="sc r0">
-        <div class="sc-head"><div class="sc-icon ic">⚡</div><h3>Backend</h3></div>
+        <div class="sc-head"><div class="sc-icon ic">⚡</div><h3>Backend · principal</h3></div>
         <div class="pills">
           <span class="pill c">PHP 8+</span><span class="pill c">Laravel</span>
           <span class="pill c">REST APIs</span><span class="pill c">Microservices</span>
-          <span class="pill">Queues &amp; Jobs</span><span class="pill">Async processing</span>
+          <span class="pill">Sanctum</span><span class="pill">Queues &amp; Jobs</span><span class="pill">Async processing</span>
+        </div>
+      </div>
+      <div class="sc r0">
+        <div class="sc-head"><div class="sc-icon ip">🟢</div><h3>Backend · secundario</h3></div>
+        <div class="pills">
+          <span class="pill p">Node.js</span><span class="pill p">TypeScript</span>
+          <span class="pill">Express</span><span class="pill">Prisma</span><span class="pill">JWT</span>
         </div>
       </div>
       <div class="sc r0">
@@ -323,21 +380,22 @@ footer a{color:var(--cyan);text-decoration:none}
         <div class="pills">
           <span class="pill p">Hexagonal Arch.</span><span class="pill p">DDD</span>
           <span class="pill p">SOLID</span><span class="pill p">Clean Code</span>
-          <span class="pill">Clean Architecture</span><span class="pill">CQRS</span>
+          <span class="pill">Clean Architecture</span><span class="pill">CQRS</span><span class="pill">Multi-tenant</span>
         </div>
       </div>
       <div class="sc r0">
         <div class="sc-head"><div class="sc-icon ic">🗄</div><h3>Bases de datos</h3></div>
         <div class="pills">
-          <span class="pill c">MySQL</span><span class="pill c">PostgreSQL</span>
+          <span class="pill c">PostgreSQL</span><span class="pill c">MySQL</span>
           <span class="pill">MongoDB</span><span class="pill">Redis</span>
-          <span class="pill">Query optimization</span>
+          <span class="pill">Índices</span><span class="pill">Query optimization</span>
         </div>
       </div>
       <div class="sc r0">
         <div class="sc-head"><div class="sc-icon io">☁</div><h3>Cloud &amp; DevOps</h3></div>
         <div class="pills">
           <span class="pill o">AWS S3</span><span class="pill">Docker</span>
+          <span class="pill">Render</span><span class="pill">Vercel</span><span class="pill">Neon</span>
           <span class="pill">Linux</span><span class="pill">Git</span><span class="pill">CI/CD</span>
         </div>
       </div>
@@ -351,8 +409,8 @@ footer a{color:var(--cyan);text-decoration:none}
       <div class="sc r0">
         <div class="sc-head"><div class="sc-icon ip">🖥</div><h3>Frontend</h3></div>
         <div class="pills">
-          <span class="pill">Angular</span><span class="pill">Vue.js</span>
-          <span class="pill">React</span><span class="pill">Ionic</span>
+          <span class="pill">React</span><span class="pill">Angular</span>
+          <span class="pill">Vue.js</span><span class="pill">Ionic</span>
         </div>
       </div>
     </div>
@@ -366,13 +424,13 @@ footer a{color:var(--cyan);text-decoration:none}
     <h2 class="sh r0">Sobre mí</h2>
     <div class="ag">
       <div class="at r0">
-        <p>Soy un ingeniero de backend con más de <strong>5 años construyendo sistemas financieros</strong> que procesan transacciones críticas. He liderado células técnicas, definido arquitecturas, mentorizado desarrolladores y tomado decisiones de alto impacto en el negocio.</p>
+        <p>Soy un ingeniero de backend con casi <strong>5 años construyendo sistemas financieros</strong> que procesan transacciones críticas. He liderado células técnicas, definido arquitecturas, mentorizado desarrolladores y tomado decisiones de alto impacto en el negocio.</p>
         <p>Mi enfoque es claro: el mejor código no es el más elegante, es el que <strong>resuelve el problema correcto</strong>, se mantiene con el tiempo y permite que el equipo escale sin fricciones.</p>
         <p>Trabajo mejor en entornos donde la <strong>calidad técnica es un valor real</strong>, no una obligación, y donde puedo aportar tanto desde la ejecución como desde la arquitectura y el liderazgo.</p>
         <div class="vals">
           <div class="vi">
             <div class="vlb">Ingeniería de producto</div>
-            <div class="vde">Entiendo el negocio antes de escribir código. El "por qué" define el "cómo".</div>
+            <div class="vde">Entiendo el negocio antes de escribir código. El “por qué” define el “cómo”.</div>
           </div>
           <div class="vi">
             <div class="vlb">Calidad como cultura</div>
@@ -405,10 +463,8 @@ footer a{color:var(--cyan);text-decoration:none}
         </div>
         <p class="ey" style="margin:1.75rem 0 .85rem">Disponibilidad</p>
         <div style="display:flex;flex-wrap:wrap;gap:.45rem">
-          <span class="pill c">100% Remoto</span>
-          <span class="pill">Híbrido</span>
-          <span class="pill">Presencial</span>
-          <span class="pill">Internacional</span>
+          <span class="pill c">100% Remoto</span><span class="pill">Híbrido</span>
+          <span class="pill">Presencial</span><span class="pill">Internacional</span>
         </div>
       </div>
     </div>
@@ -421,12 +477,12 @@ footer a{color:var(--cyan);text-decoration:none}
   <div class="wrap" style="position:relative;z-index:1">
     <p class="ey r0" style="text-align:center">¿Trabajamos juntos?</p>
     <h2 class="sh r0" style="text-align:center;max-width:600px;margin-inline:auto">¿Tienes un proyecto<br>o una vacante remota?</h2>
-    <p class="r0" style="color:var(--muted2);font-size:15px;max-width:480px;margin:1rem auto 0;text-align:center;line-height:1.75">Estoy disponible para posiciones senior remotas, liderazgo técnico y proyectos en el ecosistema PHP / Laravel / fintech.</p>
+    <p class="r0" style="color:var(--muted2);font-size:15px;max-width:480px;margin:1rem auto 0;text-align:center;line-height:1.75">Estoy disponible para posiciones senior remotas, liderazgo técnico y proyectos en el ecosistema PHP / Laravel / Node.js / fintech.</p>
     <a href="mailto:carodriguez.ort@gmail.com" class="ct-email r0">carodriguez.ort@gmail.com</a>
     <div class="ct-links r0">
       <a href="mailto:carodriguez.ort@gmail.com" class="cl f">✉ Enviar email</a>
-      <a href="https://linkedin.com/in/carlos-arturorodriguez-a2285a1b9" target="_blank" class="cl">in LinkedIn</a>
-      <a href="https://github.com/CarodriguezDev96" target="_blank" class="cl">⌥ GitHub</a>
+      <a href="https://linkedin.com/in/carlos-arturo-rodriguez-a2285a1b9" target="_blank" rel="noopener" class="cl">in LinkedIn</a>
+      <a href="https://github.com/CarodriguezDev96" target="_blank" rel="noopener" class="cl">⌥ GitHub</a>
     </div>
     <div class="r0" style="text-align:center">
       <span class="avpill">
@@ -438,17 +494,16 @@ footer a{color:var(--cyan);text-decoration:none}
 </section>
 
 <footer>
-  <a href="https://github.com/CarodriguezDev96">CarodriguezDev96</a> · Senior Backend Developer · PHP &amp; Laravel · 2026
+  <a href="https://github.com/CarodriguezDev96">CarodriguezDev96</a> · Senior Backend Developer · PHP &amp; Laravel · Node.js · 2026
 </footer>
 
 <script>
-// TERMINAL TYPING
 const lines=[
   ['cm','// carlos-rodriguez.php'],['',''],
   ['k','class ','wh','CarlosRodriguez'],['wh','{'],['',''],
   ['k','    public string ','v','$role'],['wh',"     = 'Senior Backend Developer';"],
   ['k','    public string ','v','$location'],['wh',"  = 'Pereira, Colombia 🇨🇴';"],
-  ['k','    public array  ','v','$stack'],['wh',"    = ['PHP','Laravel','AWS'];"],
+  ['k','    public array  ','v','$stack'],['wh',"    = ['PHP','Laravel','Node'];"],
   ['k','    public array  ','v','$arch'],['wh',"     = ['Hexagonal','DDD'];"],
   ['k','    public bool   ','v','$openRemote'],['st','  = true;'],['',''],
   ['st','    public function ','wh','philosophy'],['wh','(): string {'],
@@ -470,17 +525,13 @@ function type(){
 }
 setTimeout(type,700);
 
-// SCROLL REVEAL
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target);}});},{threshold:.1});
 document.querySelectorAll('.r0').forEach(el=>obs.observe(el));
 
-// NAV BG
 window.addEventListener('scroll',()=>{
-  document.getElementById('nav').style.background=
-    window.scrollY>60?'rgba(7,17,31,.98)':'rgba(7,17,31,.88)';
+  document.getElementById('nav').style.background=window.scrollY>60?'rgba(7,17,31,.98)':'rgba(7,17,31,.88)';
 });
 
-// MOBILE NAV
 let open=false;
 function toggleNav(){
   open=!open;
